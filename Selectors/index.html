@@ -2,78 +2,161 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector in CSS</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
     <header>
-        <h1>Reddit
-            <button id="login">Log in</button>
-            <button id="signup">Sign up</button>
-        </h1>
-        <div>
-            <input type="text" placeholder="username">
-            <input type="password" placeholder="password">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="/home">Home</a></li>
-                <li><a href="/popular">Popular</a></li>
-                <li><a href="/all">All</a></li>
-                <li><a href="/rising">Rising</a></li>
+        <nav id="navbar">
+            <ul id="nav-items">
+                <li class="nav-item home">Home</li>
+                <li class="nav-item about">About</li>
+                <li class="nav-item services">Services</li>
+                <li class="nav-item portfolio">Portfolio</li>
+                <li class="nav-item contact">Contact</li>
+                <li class="nav-item know-more btn-bg">Know More</li>
             </ul>
         </nav>
-        <hr>
     </header>
     <main>
-        <p>
-            John &nbsp;&nbsp;
-            <a class="follow" href="/john">Follow /u/john</a></span>
-        </p>
-        <h3>What is the best programming language to learn in 2024?</h3>
-        <span>
-            <button>+upvote</button>
-            <button>comment</button>
-        </span>
-        <hr />
+        <section id="home">
+            <h2>Home</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet est laudantium enim facere vero,
+                maiores officia eius nemo error excepturi aliquam vel fuga laborum aperiam quidem modi iusto. Illum,
+                quaerat.
+            </p>
+            <ul>
+                <li>We are Here To Teach You</li>
+                <li>Code Backend</li>
+            </ul>
+            <button class="btn home-btn">Learn More</button>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet est laudantium enim facere vero,
+                maiores officia eius nemo error excepturi aliquam vel fuga laborum aperiam quidem modi iusto. Illum,
+                quaerat.
+            </p>
+            <ul>
+                <li>We Are Learning About Selectors</li>
+                <li>Selectors in CSS</li>
+            </ul>
+            <button class="btn about-btn">Discover More</button>
+        </section>
+        <section id="services">
+            <h2>Services</h2>
+            <p>
+                Our services include:
+            </p>
+            <ul>
+                <li>Web Development</li>
+                <li>UI/UX Design</li>
+                <li>SEO Services</li>
+                <li>Content Management</li>
+            </ul>
+            <button class="btn services-btn">Explore Services</button>
+        </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-item">
+                <p>Project 1 Description</p>
+            </div>
+            <div class="portfolio-item">
+                <p>Project 2 Description</p>
+            </div>
+            <div class="portfolio-item">
+                <p>Project 3 Description</p>
+            </div>
+            <button class="btn portfolio-btn">View More</button>
+        </section>
+        <section id="contact">
+            <h2 class="content">Contact</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet est laudantium enim facere vero,
+                maiores officia eius nemo error excepturi aliquam vel fuga laborum aperiam quidem modi iusto. Illum,
+                quaerat.
+            </p>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, a voluptate quidem quas totam eum
+                cum, quam necessitatibus sapiente iure aliquam ad dignissimos inventore voluptatem ipsam, cumque
+                perferendis ullam! Tempora!
+            </p>
+            <ul>
+                <li>Contact me here...</li>
+                <li>Know More About Selectors</li>
+            </ul>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
 
-        <p>
-            Alice &nbsp;&nbsp;
-            <a class="follow" href="/alice">Follow /u/alice</a>
-        </p>
-        <h3>How to prepare for a coding interview?</h3>
-        <span>
-            <button>+upvote</button>
-            <button>comment</button>
-        </span>
-        <hr />
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
 
-        <p>
-            Michael &nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="follow" href="/michael">Follow /u/michael</a>
-        </p>
-        <h3>What are the best productivity hacks?</h3>
-        <span>
-            <button>+upvote</button>
-            <button>comment</button>
-        </span>
-        <hr />
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
 
-        <p>
-            Sarah &nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="follow" href="/sarah">Follow /u/sarah</a>
-        </p>
-        <h3>How to stay motivated while working from home?</h3>
-        <span>
-            <button>+upvote</button>
-            <button>comment</button>
-        </span>
-        <hr />
+                <button type="submit" class="btn contact-btn">Submit</button>
+            </form>
+        </section>
+        <section id="know-more">
+            <h2>Know More</h2>
+            <p>Know More Here</p>
+            <button class="btn know-more-btn">Find Out More</button>
+        </section>
+        <section id="faq">
+            <h2>FAQ</h2>
+            <details>
+                <summary>What is CSS?</summary>
+                <p>CSS stands for Cascading Style Sheets. It describes how HTML elements are to be displayed on screen,
+                    paper, or in other media.</p>
+            </details>
+            <details>
+                <summary>How do I learn CSS?</summary>
+                <p>You can learn CSS through various online resources, tutorials, and practice.</ </details>
+                <details>
+                    <summary>Why use CSS?</summary>
+                    <p>CSS is used to style and layout web pages, including the design, colors, and fonts.</ </details>
+                        <button class="btn faq-btn">Read More FAQs</button>
+        </section>
+        <section id="blog">
+            <h2>Blog</h2>
+            <article class="blog-post">
+                <h3>Understanding CSS Selectors</h3>
+                <p>
+                    CSS selectors are used to select the HTML elements you want to style. There are various types of
+                    selectors such as class, id, and tag selectors.
+                </p>
+                <button class="btn blog-btn">Read More</button>
+            </article>
+            <article class="blog-post">
+                <h3>Advanced CSS Techniques</h3>
+                <p>
+                    Learn advanced CSS techniques to create dynamic and responsive web designs.
+                </p>
+                <button class="btn blog-btn">Read More</button>
+            </article>
+            <article class="blog-post">
+                <h3>Styling Forms with CSS</h3>
+                <p>
+                    Tips and tricks for styling forms with CSS to create user-friendly interfaces.
+                </p>
+                <button class="btn blog-btn">Read More</button>
+            </article>
+        </section>
     </main>
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </footer>
 </body>
 
 </html>
